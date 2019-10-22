@@ -1,0 +1,11 @@
+<?php
+session_start();
+include 'DB.php';
+$id=$_GET['id'];
+$sql="select * from liuyan where id=$id";
+dbcon();
+$set=mysqli_query($dbcon, $sql);
+
+?>
+<input type="hidden" name="lyid" value="<?php $id['count']?>">
+<input type="submit" value="修改">

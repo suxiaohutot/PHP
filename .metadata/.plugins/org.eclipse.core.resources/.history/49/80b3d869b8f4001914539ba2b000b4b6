@@ -1,0 +1,36 @@
+<?php
+include_once ('database.php');
+
+$userid=$_POST['id'];
+$name=$_POST['name'];
+$sex=$_POST['sex'];
+$password=$_POST['password'];//密码
+$confpasw=$_POST['confirmpaswd'];//验证密码
+
+//var_dump($databasecon);
+if ($password!=$confpasw){
+    exit("密码和确认密码不一致");
+}
+
+$yzname= "select * from user where name='$name'";
+$ret=mysqli_query($databasecon, $yzname);
+$num=mysqli_num_rows($ret);
+if ($num==1){
+    exit("当前用户已经注册");
+}else {
+    $zhucesql="insert into user values( '$userid','$name', '$sex', '$password')";
+    getcon();
+    //var_ dump( $databasecon);
+    mysqli_query( $databasecon,"set name utf8");//设置数据链接编码
+    mysqli_query ($databasecon,$zhucesql);
+    echo "注册成功";"<br/>";
+    $userid=mysqli_insert_id( $databasecon);
+    //echo  $userid;
+    closecon( );
+    header("location:dengluhtml.php");
+}
+
+
+
+
+?>

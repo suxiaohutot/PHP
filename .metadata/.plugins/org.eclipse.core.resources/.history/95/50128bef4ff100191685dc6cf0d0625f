@@ -1,0 +1,12 @@
+<?php
+include 'db.php';
+$sqli="select * from liuyan";
+dbcon();
+$seti=mysqli_query($dbcon, $sqli);
+while ($reut=mysqli_fetch_array($seti)){
+    echo  "留言内容：".$reut['cont']."<br>";
+    echo  "留言人:" .$reut["usernam"]."<br>";
+    $time=$reut['time'];
+    echo "留言时间：".$time."<br>"
+}
+?>

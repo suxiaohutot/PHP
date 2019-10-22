@@ -1,0 +1,14 @@
+<?php
+include 'DB.php';
+session_start();//打开session
+$username=$_POST['username'];
+$password=$_POST['password'];
+$_SESSION['username']=$username;
+$sql="select * from user where name='$username' and password='$password'";
+dbcon();
+$result=mysqli_query($dbcon, $sql);
+$num=mysqli_num_rows($result);
+while ($nameinfo=mysqli_fetch_array($result)){
+    echo "用户名"
+}
+?>

@@ -1,0 +1,6 @@
+<?php 
+session_start(); 
+?>
+<form>
+留言内容：<input>
+</form>

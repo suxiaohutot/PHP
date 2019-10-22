@@ -1,0 +1,30 @@
+<form action="regist.php" method="post">
+<table>
+    <tr>
+    	<td>id</td>
+    	<td><input type="text" name="id"></td>
+    </tr>
+    <tr>
+    	<td>name</td>
+    	<td><input type="text" name="name"></td>
+    </tr>
+    <tr>
+    	<td>sex</td>
+    	<td><input type="text" name="sex"></td>
+    </tr>
+    <tr>
+    	<td>password</td>
+    	<td><input type="text" name="password"></td>
+    </tr>
+    <tr>
+    	<td>confirmpaswd</td>
+    	<td><input type="text" name="confirmpaswd"></td>
+    </tr>
+</table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button>注册</button>
+</form>

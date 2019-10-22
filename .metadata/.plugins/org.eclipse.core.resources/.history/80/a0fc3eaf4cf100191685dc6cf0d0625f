@@ -1,0 +1,6 @@
+<?php
+$dbcon=null;
+function dbcon(){
+    
+}
+?>

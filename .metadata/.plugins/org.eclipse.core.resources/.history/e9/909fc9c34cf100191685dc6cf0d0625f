@@ -1,0 +1,7 @@
+<?php
+$dbcon=null;
+function dbcon(){
+    global $dbcon;
+    $dbcon=mysqli_connect()
+}
+?>

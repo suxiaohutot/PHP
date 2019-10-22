@@ -1,0 +1,6 @@
+<?php 
+session_start(); 
+?>
+<form action="linyan">
+留言内容：<input type="text">
+</form>

@@ -1,0 +1,8 @@
+<?php 
+session_start();
+include 'DB.php';
+$cont=$_POST['cont'];
+$name=$_SESSION['username'];
+$time=data('Y-m-d H:i:s');
+$sql="insert into liyan caluse(null,'')"
+?>

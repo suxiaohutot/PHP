@@ -1,0 +1,9 @@
+<?php 
+session_start(); 
+?>
+<form action="linyan.php" method="post">
+留言内容：<input type="text" name="cont">
+<br>
+留言人：<?php echo $_SESSION['username'] ?>
+<input>
+</form>

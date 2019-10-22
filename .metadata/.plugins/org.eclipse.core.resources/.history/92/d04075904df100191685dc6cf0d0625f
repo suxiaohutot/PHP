@@ -1,0 +1,15 @@
+<?php
+include 'DB.php';
+session_start();//打开session
+$username=$_POST['username'];
+$password=$_POST['password'];
+$_SESSION['username']
+$sql="select * from user where name='$username' and password='$password'";
+$resultSet = mysqli_query($databasecon, $sql);
+if (mysqli_num_rows($resultSet)>0){
+    echo "ok 都正确  --".$username."--登录成功";
+}else {
+    echo "错误-.-";
+}
+closecon();
+?>

@@ -1,0 +1,18 @@
+<form action="regist.php" method="post">
+<table>
+    <tr>
+    	<td>id</td>
+    	<td><input type="text" name="id"></td>
+    </tr>
+    <tr>
+    	<td>name</td>
+    	<td>input type="text" name="name"></td>
+    </tr>
+</table>
+    <br>
+    <<br>
+    sex<input type="text" name="sex"><br>
+    password<input type="text" name="password"><br>
+    confirmpaswd<input type="text" name="confirmpaswd"><br>
+    <button>注册</button>
+</form>
