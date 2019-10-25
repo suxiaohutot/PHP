@@ -6,6 +6,7 @@
 <stringAttribute key="debugTransferEncoding" value="UTF-8"/>
 <stringAttribute key="file_name" value="/test/zhuce.php"/>
 <stringAttribute key="name" value="&lt;none&gt;"/>
+<booleanAttribute key="org.eclipse.debug.ui.private" value="false"/>
 <stringAttribute key="org.eclipse.php.debug.core.PHP_Project" value="/test"/>
 <booleanAttribute key="org.eclipse.php.debug.core.RunWithDebugInfo" value="true"/>
 <stringAttribute key="org.eclipse.php.debug.coreconfiguration_delegate_class" value="org.eclipse.php.internal.debug.core.debugger.NoneDebuggerConfiguration$WebLaunchDelegate"/>

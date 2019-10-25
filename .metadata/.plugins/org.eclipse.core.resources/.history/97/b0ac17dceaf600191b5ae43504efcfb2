@@ -1,0 +1,15 @@
+<?php
+include 'DB.php';
+$name=$_POST['name'];
+$password=$_POST['password'];
+$yzid= "select * from user where name='$name'";
+$ret=mysqli_query($databasecon, $yzid);
+$num=mysqli_num_rows($ret);
+if ($num==1){
+    $sql="update liuyan set password='$password' where id='$id'";
+    dbcon();
+    $sent=mysqli_query($dbcon, $sql);
+}else{
+    exit("当前ID未注册");
+}
+?>

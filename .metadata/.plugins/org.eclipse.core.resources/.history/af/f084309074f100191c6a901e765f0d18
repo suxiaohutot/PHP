@@ -1,6 +1,0 @@
-<?php
-session_start();
-include 'DB.php';
-$id=$_GET['id'];
-$sql="select * from liuyan where id=$id";
-?>

@@ -1,7 +1,0 @@
-<?php
-include 'DB.php';
-$id=$_POST['id'];
-$cont=$_POST['cont'];
-echo  $cont;
-$sql="update liuyan set count"
-?>

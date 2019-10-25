@@ -1,0 +1,6 @@
+<?php
+calss student{
+    public $name;
+    
+}
+?>

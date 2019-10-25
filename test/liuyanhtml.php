@@ -1,6 +1,7 @@
 <?php 
 session_start(); 
 ?>
+
 <form action="liuyan.php" method="post">
 
 <!-- id:<input type="text" name="id"> -->

@@ -1,0 +1,10 @@
+<?php
+calss student{
+    public $name;
+    public $student_id;
+    public $age;
+    public function introduce(){
+        echo  "大家好，我是{$this->name},今年"
+    }
+}
+?>

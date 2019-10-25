@@ -1,4 +1,0 @@
-<?php
-include 'DB.php';
-$id=$_POST['']
-?>

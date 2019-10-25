@@ -1,0 +1,72 @@
+<?php
+include 'db.php';
+$sqli="select * from liuyan";
+dbcon();
+$seti=mysqli_query($dbcon, $sqli);
+?>
+<table border="1">
+		<tr>
+			<td>留言人</td>
+			<td>留言内容</td>
+			<td>留言时间</td>
+			<td>操作</td>
+		</tr>
+<!-- 		</table> -->
+	
+<?php 
+while ($reut=mysqli_fetch_assoc($seti)){
+    $time=$reut['time'];
+    $id=$reut['id'];
+?>
+<!-- <table border="1"  class="table table-bordered"> -->
+<tbody>
+		<tr>
+    		<td><?php echo $reut["name"] ?></td>
+    		<td><?php echo $reut['count'] ?></td>
+    		<td><?php echo $reut['time'] ?></td>
+    		<td>
+        		<a href="delt.php?url=delt.php&id=<?php echo $id ?>">删除</a>
+        		<a href="edit.php?id=<?php echo $id ?>">编辑</a>
+        		<br/><br/>
+            </td>
+		</tr>
+		</tbody>
+	</table> 
+	
+    <?php }
+    
+ 
+ echo "<br>"."<a href='dengluhtml.php'>重新登录</a>";
+ ?>
+ 
+ <table border="1">
+		<tr>
+		<td>序号</td>
+			<td>留言人</td>
+			<td>留言内容</td>
+			<td>留言时间</td>
+			<td>操作</td>
+		</tr>
+<?php 
+while($reut=mysqli_fetch_assoc($seti)){
+    ?>
+    	<tr>
+    <?php foreach ($reut as $aa)
+    {
+        echo "<td>".$v."<td>";
+    }
+    $time=$reut['time'];
+    $id=$reut['id'];
+}
+?>
+<td>
+    <a href="delt.php?url=delt.php&id=<?php echo $id ?>">删除</a>
+    <a href="edit.php?id=<?php echo $id ?>">编辑</a>
+    <br/><br/>
+</td>
+
+?>
+
+
+ 
+

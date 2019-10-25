@@ -1,6 +1,0 @@
-<?php 
-session_start(); 
-?>
-<form action="linyan.php">
-留言内容：<input type="text">
-</form>

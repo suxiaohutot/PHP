@@ -1,6 +1,0 @@
-<?php 
-session_start();
-include 'DB.php';
-$cont=$_POST['cont'];
-$name=$_SESSION['name'];
-?>
