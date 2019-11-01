@@ -1,7 +1,0 @@
-<?php
-calss student{
-    public $name;
-    public $student_id;
-    public $age;
-}
-?>
