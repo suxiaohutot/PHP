@@ -1,17 +1,40 @@
-<?php 
-session_start();
-include 'DB.php';
-// $id=$_POST['id'];
-$name=$_SESSION['username'];
-$cont=$_POST['cont'];
-$time=date('Y-m-d H:i:s');
 
-$sql="insert into liuyan values(null,'$cont','$name','$time')";
-dbcon();
-$set=mysqli_query($dbcon, $sql);
-if($set){
-    echo "留言成功"."<a href='liuyanlist.php'>留言列表</a>"; 
-}else {
-    echo "留言失败"."<a href='dengluhtml.php'>返回登录</a>";
-}
-?>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<style type="text/css">
+	   body{ text-align:center} 
+	</style>
+</head>
+<body>
+<br>
+<div class="container">
+	<div class="jumbotron">
+        <?php 
+        session_start();
+        include 'DB.php';
+        // $id=$_POST['id'];
+        $name=$_SESSION['username'];
+        $cont=$_POST['cont'];
+        $time=date('Y-m-d H:i:s');
+        
+        $sql="insert into liuyan values(null,'$cont','$name','$time')";
+        dbcon();
+        $set=mysqli_query($dbcon, $sql);
+        if($set){
+            ?>
+            <p>留言成功</p>
+            <a href='myzone.php' class="btn btn-default">返回个人中心</a>
+            <?php 
+        }else {
+            ?>
+            <p>留言失败</p>
+            <a href='dengluhtml.php' class="btn btn-default">返回重新登录</a>
+            <?php 
+        }
+        ?>
+   </div>
+</div>
+</body>
+</html>

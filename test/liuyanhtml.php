@@ -1,17 +1,26 @@
 <?php 
 session_start(); 
 ?>
-
-<form action="liuyan.php" method="post">
-
-<!-- id:<input type="text" name="id"> -->
-<!-- <br> -->
-
-留言内容：<input type="text" name="cont">
+<html>
+<head>
+<meta charset="utf-8"/>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<style type="text/css">
+	   body{ text-align:center} 
+	</style>
+</head>
+<body>
 <br>
-留言人：<?php echo $_SESSION['username'] ?>
-<br>
-<input type="submit" name="tijiao" value="提交内容">
-<br>
-
-</form>
+<div class="container">
+	<div class="jumbotron">
+        <form action="liuyan.php" method="post">
+        	<p>留言人名称：<?php echo $_SESSION['username'] ?></p> <br>
+    		<p>留言内容：</p>
+    		<input type="text" name="cont" class="form-control"><br>
+            <input type="submit" name="tijiao" value="提交内容" class="btn btn-success">
+            <br>
+        </form>
+   </div>
+</div>
+</body>
+</html>

@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>跳转</title>
+    <script src="js/jquery-3.4.0.min.js"></script>
+</head>
+<body>
+    
+
 <?php
 include_once ('database.php');
 
@@ -21,6 +31,7 @@ if ($name==null || $sex==null || $password==null || $confpasw==null){
 }else{
     if ($num==1){
         //     exit("当前用户名已经注册");
+        echo "用户名重复";
         echo "<br>"."<a href='zhuce.php'>返回 重新注册</a>";
         
     }else {
@@ -34,11 +45,24 @@ if ($name==null || $sex==null || $password==null || $confpasw==null){
         //echo  $userid;
         closecon( );
         //header("location:dengluhtml.php");
-        echo "登录成功"."<br>"."<a href='dengluhtml.php'>前往登录</a>";
+        echo "<br>"."<a href='dengluhtml.php'>亲(づ￣3￣)づ╭❤～ ~~请稍等！正在跳转登录页面哦~~~~</a>";
+        ?>
+            <script type="text/javascript"> 
+            onload=function(){ 
+                setInterval(go, 1000); 
+                }; 
+                var x=3; //利用了全局变量来执行 
+                function go(){ 
+                x--; 
+                if(x>0){ 
+                document.getElementById("sp").innerHTML=x; //每次设置的x的值都不一样了。 
+                }else{ 
+                location.href='dengluhtml.php'; 
+            	} 
+            } 
+            </script> 
+        <?php 
     }
 }
-
-
-
 
 ?>

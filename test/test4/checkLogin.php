@@ -1,7 +1,5 @@
 <?php
 header("Content-Type:text/html;charset=utf-8");
-
-//开启session
 session_start();
 //判断是否有表单提交
 if(empty($_POST)){

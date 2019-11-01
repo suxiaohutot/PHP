@@ -1,7 +1,15 @@
 <?php
+session_start();//打开session
+// include './test/DB.php';
+$id=$_SESSION['id'];
+$username=$_SESSION['username'];
+// var_dump($postid);
+// var_dump($postusername);
+
 header('Content-type:text/html;charset=utf-8');
 //定义用户信息：id和姓名
-$info = array('id'=>234,'name'=>'小虎');
+$info = array('id'=>$id,'name'=>$username);
+// $info = array('id'=>2,'name'=>'小虎');
 //判断是否上传头像
 if(!empty($_FILES['pic'])){	
 	//获取用户上传文件信息
@@ -58,22 +66,35 @@ if(!empty($_FILES['pic'])){
 	imagejpeg($thumb,$new_file,100);
 }
 ?>
+
 <!doctype html>
 <html>
- <head>
-  <meta charset="utf-8">
-  <title>为用户头像制作缩略图</title>
- </head>
- <body>
- <div class="box">
-   <h2>编辑用户头像</h2>
-   <p>用户姓名：<?php echo $info['name'];?></p>
-   <p class="exist">现有头像：</p>
-   <img src="<?php echo './'.$info['id'].'.jpg?rand='.rand(); ?>" onerror="this.src='./default.jpg'" />
-   <form method="post" enctype="multipart/form-data">
-	 <p class="upload">上传头像：<input name="pic" type="file"/></p>
-	 <p><input class="sub" type="submit" value="保存头像"></p>
-   </form>
- </div>
- </body>
+<head>
+<meta charset="utf-8">
+<title>用户头像修改</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" />
+<style type="text/css">
+   body{ text-align:center} 
+</style>
+</head>
+ 
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <h2>编辑用户头像</h2>
+        <p>用户ID：<?php echo $info['id'];?></p>
+        <p>用户姓名：<?php echo $info['name'];?></p>
+        <p class="exist">当前头像：</p>
+        <img src="<?php echo './'.$info['id'].'.jpg?rand='.rand(); ?>" onerror="this.src='./default.jpg'" />
+        <form method="post" enctype="multipart/form-data" lass="container">
+             <p class="upload">上传头像：<input name="pic" type="file" style="Margin:0 auto 0 auto "/></p>
+             <p><input class="btn btn-warning" type="submit" value="保存头像"></p>
+             <a href='../myzone.php' class="btn btn-default">返回个人中心</a>
+        </form>
+    </div>
+</div>
+</body>
 </html>
+
+
+

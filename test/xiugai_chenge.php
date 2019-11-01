@@ -13,10 +13,11 @@ if ($num==1){
     mysqli_query( $databasecon,"set name utf8");//设置数据链接编码
     mysqli_query ($databasecon,$xiugaisql);
     echo "修改成功";"<br/>";
+    
     $userid=mysqli_insert_id( $databasecon);
     closecon();
     echo "<a href='dengluhtml.php'>返回登录</a>";
 }else{
-    echo "未找到当前用户 ";
+    echo "未找到当前用户 ".var_dump($name);
 }
 ?>

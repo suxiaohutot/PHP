@@ -1,0 +1,28 @@
+<?php 
+session_start(); 
+?>
+
+<form action="liuyan.php" method="post">
+    <!-- id:<input type="text" name="id"> -->
+    <!-- <br> -->
+
+        留言内容：<input type="text" name="cont">
+        <br>
+        留言人：<?php echo $_SESSION['username'] ?>
+        <br>
+        <input type="submit" name="tijiao" value="提交内容">
+        <br>
+        
+</form>
+<div class="container">
+	<div class="jumbotron">
+        <h3>欢迎用户：<?php echo $username ?></h3>
+        <br>
+        <p>你可以进行一下操作哦！</p>
+        <p>
+        	<a href="./test4/portrait.php" class="btn btn-success btn-lg" role="button">修改头像</a>&nbsp;&nbsp;
+        	<a href="liuyanhtml.php" class="btn btn-info btn-lg" role="button">前去留言</a>&nbsp;&nbsp;
+        	<a href=".php" class="btn btn-info btn-lg" role="button">修改密码</a>
+      	</p>
+   </div>
+</div>

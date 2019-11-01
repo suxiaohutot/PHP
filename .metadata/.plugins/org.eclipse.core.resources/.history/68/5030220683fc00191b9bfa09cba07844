@@ -1,0 +1,21 @@
+<?php 
+session_start(); 
+?>
+
+
+<div class="container">
+	<div class="jumbotron">
+        <form action="liuyan.php" method="post">
+    <!-- id:<input type="text" name="id"> -->
+    <!-- <br> -->
+
+        留言内容：<input type="text" name="cont">
+        <br>
+        留言人：<?php echo $_SESSION['username'] ?>
+        <br>
+        <input type="submit" name="tijiao" value="提交内容">
+        <br>
+        
+</form>
+   </div>
+</div>
