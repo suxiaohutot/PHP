@@ -28,28 +28,34 @@ if($username==null || $password==null){
         echo "用户名:".$nameinfo['name']."<br>";
     }
     if ($num>0){
-        echo "登录成功"."<br>"."<a href='liuyanhtml.php'>去留言</a>".
-            "<br><br>".
-            "<a href='upload_html.php'>修改头像</a>";
+        echo "登录成功";
+        echo "正在前往个人中心    请稍等~~~~~~~~~";
         ?>
-        <a href="myzone.php">前往个人中心</a>
-        <br>
-    	<form action="./test4/portrait.php" method="post" class="container">
-        	<div>
-                <input type="submit" value="修改用户头像" class="btn btn-default">
-                
-                <input type="reset" value="去留言" class="btn btn-default">
-        	</div>
-        </form>
-        
+        <script type="text/javascript"> 
+            onload=function(){ 
+                setInterval(go, 1000); 
+                }; 
+                var x=2; //利用了全局变量来执行 
+                function go(){ 
+                x--; 
+                if(x>0){ 
+                document.getElementById("sp").innerHTML=x; //每次设置的x的值都不一样了。 
+                }else{ 
+                location.href='myzone.php'; 
+            	} 
+            } 
+            </script> 
         <?php 
         
     }
     else {
-        echo "用户名或者密码错误"."<br><br>".
-        "<a href='dengluhtml.php'>返回登录</a>".
-        "<br><br>".
-        "<a href='xiugai.php'>找回密码</a>";
+            ?>
+            <br>
+            	<p>用户名或者密码错误</p><br>
+            	<a href='dengluhtml.php' class="btn btn-success">返回重新登录</a>
+            	<br><br>
+            	<a href='xiugai.php' class="btn btn-success">找回密码</a>
+            <?php 
     }
 }
 // $sqlid="select id from user where name='$username'";

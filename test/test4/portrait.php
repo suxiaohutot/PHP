@@ -35,6 +35,9 @@ if(!empty($_FILES['pic'])){
 	//判断上传文件类型
 	if($type !== 'jpg'){
 		echo '图像类型不符合要求，允许的类型为:jpg';
+		?>
+		<a href="portrait.php">点击返回重新上传</a>
+		<?php 
 		return false;
 	}
 
@@ -76,6 +79,9 @@ if(!empty($_FILES['pic'])){
 <style type="text/css">
    body{ text-align:center} 
 </style>
+    <script type="text/javascript"> 
+    	
+    </script>
 </head>
  
 <body>
@@ -88,7 +94,7 @@ if(!empty($_FILES['pic'])){
         <img src="<?php echo './'.$info['id'].'.jpg?rand='.rand(); ?>" onerror="this.src='./default.jpg'" />
         <form method="post" enctype="multipart/form-data" lass="container">
              <p class="upload">上传头像：<input name="pic" type="file" style="Margin:0 auto 0 auto "/></p>
-             <p><input class="btn btn-warning" type="submit" value="保存头像"></p>
+             <p><input class="btn btn-warning" type="submit" value="保存头像" name="btn1"></p>
              <a href='../myzone.php' class="btn btn-default">返回个人中心</a>
         </form>
     </div>
