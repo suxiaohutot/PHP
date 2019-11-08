@@ -18,21 +18,26 @@
         $name=$_SESSION['username'];
         $cont=$_POST['cont'];
         $time=date('Y-m-d H:i:s');
-        
-        $sql="insert into liuyan values(null,'$cont','$name','$time')";
-        dbcon();
-        $set=mysqli_query($dbcon, $sql);
-        if($set){
-            ?>
-            <p>留言成功</p>
-            <a href='myzone.php' class="btn btn-default">返回个人中心</a>
-            <?php 
+        if($cont==null){
+            echo "内容不能为空";
+            ?><br><br><a href='liuyanhtml.php' class="btn btn-default">返回重新留言</a><?php 
         }else {
-            ?>
-            <p>留言失败</p>
-            <a href='dengluhtml.php' class="btn btn-default">返回重新登录</a>
-            <?php 
+            $sql="insert into liuyan values(null,'$cont','$name','$time')";
+            dbcon();
+            $set=mysqli_query($dbcon, $sql);
+            if($set){
+                ?>
+                <p>留言成功</p>
+                <a href='myzone.php' class="btn btn-default">返回个人中心</a>
+                <?php 
+            }else {
+                ?>
+                <p>留言失败</p>
+                <a href='dengluhtml.php' class="btn btn-default">返回重新登录</a>
+                <?php 
+            }
         }
+        
         ?>
    </div>
 </div>

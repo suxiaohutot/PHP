@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<style type="text/css">
+	body{ text-align:center} 
+	</style>
+</head>
+<body>
+<br>
+<?php 
+$username=$_POST['username'];
+$password=$_POST['password'];
+if($username == "admin" && $password=="admin"){
+    ?>
+    <div class="container">
+	<div class="jumbotron">
+        <h3>欢迎用户：<?php echo $username ?></h3>
+        <br>
+        <p>你可以进行一下操作哦！</p>
+        <p>
+        	<a href="./test4/portrait.php" class="btn btn-success btn-lg" role="button">修改头像</a>&nbsp;&nbsp;
+        	<a href="liuyanhtml.php" class="btn btn-info btn-lg" role="button">前去留言</a>&nbsp;&nbsp;
+        	<a href="xiugai.php" class="btn btn-info btn-lg" role="button">修改密码</a>
+      	</p>
+   </div>
+</div>
+    <?php 
+}
+?>
+
+</body>
+</html>

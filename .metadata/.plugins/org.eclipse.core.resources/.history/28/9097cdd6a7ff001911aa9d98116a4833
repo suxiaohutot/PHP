@@ -1,0 +1,18 @@
+<?php
+include 'DB.php';
+session_start();//打开session
+$id=$_SESSION['id'];
+$password=$_POST['password'];
+if($password==null){
+    echo "密码不能为空";
+}else {
+    $xiugaisql="update user set password='$password' where id='id'";
+    dbcon();
+    mysqli_query ($dbcon,$xiugaisql);
+        echo "修改成功";"<br/>";
+        echo  "请稍等 ，正在跳转登录页面.......";?>
+        <?php 
+}
+?>
+
+

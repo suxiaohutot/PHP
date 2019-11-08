@@ -9,20 +9,24 @@
 	</style>
 </head>
 <body>
+<br>
+<div class="container">
+	<div class="jumbotron">
     <div>
     	<form action="regist.php" method="post" class="container">
-    		<div ><h2>淘宝留言系统注册页</h2></div>
+    		<div ><h2>淘宝留言网注册页面</h2></div>
+    		<br>
     		<div class="form-inline">
     			<div class="form-group">
         			<div class="panel panel-default">
                     	<div class="panel-heading">
-                    		注册
+                    		<h3>注册</h3>
                     	</div>
                     	<div class="panel-body">
                     		<table class="table">
                                 <tr>
                                 	<td>名称:</td>
-                                	<td><input type="text" name="name" class="form-control" placeholder="名称"></td>
+                                	<td><input type="text" name="name" class="form-control" placeholder="用户名"></td>
                                 </tr>
                                 <tr>
                                 	<td>性别:</td>
@@ -53,7 +57,7 @@
             
         </form>
     </div>
-    
+    </div></div>
 </body>
 
 </html>

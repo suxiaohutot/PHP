@@ -22,7 +22,7 @@ $id=$_SESSION['id'];
         <p>
         	<a href="./test4/portrait.php" class="btn btn-success btn-lg" role="button">修改头像</a>&nbsp;&nbsp;
         	<a href="liuyanhtml.php" class="btn btn-info btn-lg" role="button">前去留言</a>&nbsp;&nbsp;
-        	<a href="xiugai.php" class="btn btn-info btn-lg" role="button">修改密码</a>
+        	<a href="xiugai_user.php" class="btn btn-info btn-lg" role="button">修改密码</a>
       	</p>
    </div>
 </div>

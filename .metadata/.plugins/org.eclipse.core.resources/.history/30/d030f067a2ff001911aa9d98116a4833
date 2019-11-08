@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<style type="text/css">
+	body{ text-align:center} 
+	</style>
+</head>
+<body>
+<br>
+<?php 
+$username=$_POST['username'];
+$password=$_POST['password'];
+if($username == "admin" && $password=="admin"){
+    ?>
+    <div class="container">
+		<div class="jumbotron">
+            <br>
+            <p>登录成功</p>
+            <br>
+            <p>
+            	<a href="liuyanlist.php" class="btn btn-success btn-lg" role="button">留言管理页</a>&nbsp;&nbsp;
+          	</p>
+   		</div>
+	</div>
+    <?php 
+}
+?>
+
+</body>
+</html>

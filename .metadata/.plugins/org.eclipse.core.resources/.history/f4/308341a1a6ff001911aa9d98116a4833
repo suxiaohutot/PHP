@@ -1,0 +1,35 @@
+<?php
+include 'DB.php';
+session_start();//打开session
+$username=$_SESSION['username'];
+$id=$_SESSION['id'];
+$password=$_POST[''];
+if($id==null || $username==null){
+    
+}else {
+    $xiugaisql="update user set password='$password' where id='id'";
+    getcon();
+    mysqli_query( $databasecon,"set name utf8");//设置数据链接编码
+    mysqli_query ($databasecon,$xiugaisql);
+    echo "修改成功";"<br/>";
+    echo  "请稍等 ，正在跳转登录页面.......";?>
+    <script type="text/javascript"> 
+        onload=function(){ 
+            setInterval(go, 1000); 
+            }; 
+            var x=3; //利用了全局变量来执行 
+            function go(){ 
+            x--; 
+            if(x>0){ 
+            document.getElementById("sp").innerHTML=x; //每次设置的x的值都不一样了。 
+            }else{ 
+            location.href='dengluhtml.php'; 
+        	} 
+        } 
+    </script> <?php 
+}
+
+
+?>
+
+

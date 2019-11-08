@@ -22,7 +22,7 @@
                     <input type="password" name="password" size="20" maxlength="15" class="form-control"><br><br>
                     
                     <input type="submit" value="修改" class="btn btn-default">
-                    <input type="reset" value="重填" class="btn btn-default">
+<!--                     <input type="reset" value="重填" class="btn btn-default"> -->
         		</div>
         	</div>
     	</form>   
